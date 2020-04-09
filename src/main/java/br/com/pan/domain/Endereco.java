@@ -12,9 +12,6 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import lombok.Data;
-
-@Data
 @Entity
 public class Endereco implements Serializable {
 
