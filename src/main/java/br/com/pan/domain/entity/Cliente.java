@@ -1,4 +1,4 @@
-package br.com.pan.domain;
+package br.com.pan.domain.entity;
 
 import java.io.Serializable;
 import java.util.ArrayList;

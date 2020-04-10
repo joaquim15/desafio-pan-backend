@@ -3,8 +3,8 @@ package br.com.pan.dto;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.pan.domain.Cliente;
-import br.com.pan.domain.Endereco;
+import br.com.pan.domain.entity.Cliente;
+import br.com.pan.domain.entity.Endereco;
 
 public class ClienteDTO {
 

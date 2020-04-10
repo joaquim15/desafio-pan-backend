@@ -1,4 +1,4 @@
-package br.com.pan.service.exceptions;
+package br.com.pan.exceptions;
 
 public class ObjectNotFoundExeption extends RuntimeException {
 
