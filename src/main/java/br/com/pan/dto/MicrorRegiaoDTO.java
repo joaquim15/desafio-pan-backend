@@ -1,14 +1,16 @@
 package br.com.pan.dto;
 
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class MicrorRegiaoDTO implements Serializable {
-
-	private static final long serialVersionUID = 1L;
-
+public class MicrorRegiaoDTO {
+	
+	@JsonProperty
 	private Long id;
+	
+	@JsonProperty
 	private String nome;
-	public UfDTO UF;
+	
+	private MesorRegiaoDTO mesorregiao;
 
 	public Long getId() {
 		return id;
@@ -26,12 +28,12 @@ public class MicrorRegiaoDTO implements Serializable {
 		this.nome = nome;
 	}
 
-	public UfDTO getUF() {
-		return UF;
+	public MesorRegiaoDTO getMesorregiao() {
+		return mesorregiao;
 	}
 
-	public void setUF(UfDTO uF) {
-		UF = uF;
+	public void setMesorregiao(MesorRegiaoDTO mesorregiao) {
+		this.mesorregiao = mesorregiao;
 	}
 
 }

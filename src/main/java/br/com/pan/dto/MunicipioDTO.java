@@ -1,13 +1,16 @@
 package br.com.pan.dto;
 
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class MunicipioDTO implements Serializable {
-
-	private static final long serialVersionUID = 1L;
-
+public class MunicipioDTO {
+	
+	@JsonProperty
 	private Long id;
+	
+	@JsonProperty
 	private String nome;
+	
+	@JsonProperty
 	public MicrorRegiaoDTO microrregiao;
 
 	public Long getId() {
@@ -18,6 +21,14 @@ public class MunicipioDTO implements Serializable {
 		this.id = id;
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	public MicrorRegiaoDTO getMicrorregiao() {
 		return microrregiao;
 	}
@@ -26,11 +37,4 @@ public class MunicipioDTO implements Serializable {
 		this.microrregiao = microrregiao;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 }

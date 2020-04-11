@@ -32,6 +32,9 @@ public class EstadoController {
 
 	@Value("${consulta.estado}")
 	private String ESTADO_URI;
+	
+	@Value("${consulta.municipio}")
+	private String MUNICIPIO_URI;
 
 	@GetMapping
 	public ResponseEntity<List<EstadoDTO>> obterEstados() {
@@ -78,8 +81,7 @@ public class EstadoController {
 
 		final RestTemplate restTemplate = new RestTemplate();
 
-		final ResponseEntity<MunicipioDTO[]> objListaMunicipio = restTemplate.getForEntity(ESTADO_URI,
-				MunicipioDTO[].class, id);
+		final ResponseEntity<MunicipioDTO[]> objListaMunicipio = restTemplate.getForEntity(MUNICIPIO_URI, MunicipioDTO[].class, id);
 
 		LOG.info("Status code value: " + objListaMunicipio.getStatusCodeValue());
 		LOG.info("Response da pesquisa estado: " + objListaMunicipio.getBody().toString());

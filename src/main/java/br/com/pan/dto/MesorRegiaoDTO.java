@@ -2,19 +2,16 @@ package br.com.pan.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class UfDTO {
+public class MesorRegiaoDTO {
 
 	@JsonProperty
 	private Long id;
 
 	@JsonProperty
-	private String sigla;
-
-	@JsonProperty
 	private String nome;
 
 	@JsonProperty
-	private RegiaoDTO regiao;
+	private UfDTO UF;
 
 	public Long getId() {
 		return id;
@@ -24,28 +21,12 @@ public class UfDTO {
 		this.id = id;
 	}
 
-	public String getSigla() {
-		return sigla;
-	}
-
-	public void setSigla(String sigla) {
-		this.sigla = sigla;
-	}
-
 	public String getNome() {
 		return nome;
 	}
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public RegiaoDTO getRegiao() {
-		return regiao;
-	}
-
-	public void setRegiao(RegiaoDTO regiao) {
-		this.regiao = regiao;
 	}
 
 }
