@@ -19,7 +19,7 @@ public class CepController {
 	private Logger LOG = LoggerFactory.getLogger(Cep.class);
 
 	@Value("${consulta.cep}")
-	private String REQUEST_URI;
+	private String CEP_URI;
 
 	/**
 	 * @param cep a ser consultado
@@ -31,7 +31,7 @@ public class CepController {
 
 		RestTemplate restTemplate = new RestTemplate();
 
-		ResponseEntity<Cep> objCep = restTemplate.getForEntity(REQUEST_URI, Cep.class, cep);
+		ResponseEntity<Cep> objCep = restTemplate.getForEntity(CEP_URI, Cep.class, cep);
 
 		LOG.info("Status code value: " + objCep.getStatusCodeValue());
 		LOG.info("Response da pesquisa por cep: " + objCep.getBody().toString());
