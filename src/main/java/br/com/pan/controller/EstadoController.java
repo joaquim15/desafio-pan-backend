@@ -1,7 +1,9 @@
 package br.com.pan.controller;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,7 +47,11 @@ public class EstadoController {
 		for (EstadoDTO estadoDTO : listDto) {
 			listaEstadoDto.add(estadoDTO);
 		}
-		return ResponseEntity.ok(listaEstadoDto);
+
+		List<EstadoDTO> listaOrdenada = listaEstadoDto.stream().sorted(Comparator.comparing(EstadoDTO::getNome))
+				.collect(Collectors.toList());
+
+		return ResponseEntity.ok(listaOrdenada);
 	}
 
 }
