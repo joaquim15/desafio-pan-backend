@@ -1,8 +1,8 @@
-package br.com.pan.domain.entity;
+package br.com.pan.dto;
 
 import java.io.Serializable;
 
-public class Cep implements Serializable {
+public class CepDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -16,7 +16,7 @@ public class Cep implements Serializable {
 	private String ibge;
 	private String gia;
 
-	public Cep() {
+	public CepDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

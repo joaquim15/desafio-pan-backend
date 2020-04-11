@@ -24,9 +24,9 @@ public class ClienteController {
 	@GetMapping(value = "consulta-cpf/{cpf}")
 	public ResponseEntity<ClienteDTO> obterClientePorCpf(@PathVariable final String cpf) {
 
+		final Optional<Cliente> obj = this.clienteRepository.findClienteByCpf(cpf);
+		
 		ClienteDTO dto = null;
-
-		Optional<Cliente> obj = this.clienteRepository.findClienteByCpf(cpf);
 
 		if (obj.isPresent()) {
 			dto = new ClienteDTO(obj.get());

@@ -2,13 +2,14 @@ package br.com.pan.dto;
 
 import java.io.Serializable;
 
-public class MunicipioDTO implements Serializable {
+public class UfDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	private Long id;
+	private String sigla;
 	private String nome;
-	public MicrorRegiaoDTO microrregiao;
+	private RegiaoDTO regiao;
 
 	public Long getId() {
 		return id;
@@ -18,12 +19,20 @@ public class MunicipioDTO implements Serializable {
 		this.id = id;
 	}
 
-	public MicrorRegiaoDTO getMicrorregiao() {
-		return microrregiao;
+	public String getSigla() {
+		return sigla;
 	}
 
-	public void setMicrorregiao(MicrorRegiaoDTO microrregiao) {
-		this.microrregiao = microrregiao;
+	public void setSigla(String sigla) {
+		this.sigla = sigla;
+	}
+
+	public RegiaoDTO getRegiao() {
+		return regiao;
+	}
+
+	public void setRegiao(RegiaoDTO regiao) {
+		this.regiao = regiao;
 	}
 
 	public String getNome() {
@@ -33,4 +42,5 @@ public class MunicipioDTO implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 }

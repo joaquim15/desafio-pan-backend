@@ -1,12 +1,15 @@
 package br.com.pan.dto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.pan.domain.entity.Cliente;
 import br.com.pan.domain.entity.Endereco;
 
-public class ClienteDTO {
+public class ClienteDTO implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private Long id;
 	private String cpf;
