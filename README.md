@@ -1,6 +1,6 @@
 # desafio-pan-backend
 
-Url no banco h2 im memoria: 
+Url do banco h2 em memoria: 
 http://localhost:8080/h2-console
 
 Cenário 1 - Consultar Cliente
