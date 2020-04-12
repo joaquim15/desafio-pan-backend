@@ -21,11 +21,6 @@ public class CepController {
 	@Value("${consulta.cep}")
 	private String CEP_URI;
 
-	/**
-	 * @param cep a ser consultado
-	 * @return ResponseEntity que agrupa o código de status http, os cabeçalhos http
-	 *         e o corpo do tipo {@link CepDTO}
-	 */
 	@GetMapping(value = "/{cep}")
 	public ResponseEntity<CepDTO> consultaCep(@PathVariable final String cep) {
 

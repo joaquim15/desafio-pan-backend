@@ -1,6 +1,5 @@
 package br.com.pan.controller;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -9,8 +8,6 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -46,7 +43,7 @@ public class EstadoController {
 		final ResponseEntity<EstadoDTO[]> objListaEstado = restTemplate.getForEntity(ESTADO_URI, EstadoDTO[].class);
 
 		LOG.info("Status code value: " + objListaEstado.getStatusCodeValue());
-		LOG.info("Response da pesquisa estado: " + objListaEstado.getBody().toString());
+		LOG.info("Response PESQUISAR ESTADO: " + objListaEstado.getBody().toString());
 
 		final EstadoDTO[] listDto = objListaEstado.getBody();
 
@@ -84,7 +81,7 @@ public class EstadoController {
 		final ResponseEntity<MunicipioDTO[]> objListaMunicipio = restTemplate.getForEntity(MUNICIPIO_URI, MunicipioDTO[].class, id);
 
 		LOG.info("Status code value: " + objListaMunicipio.getStatusCodeValue());
-		LOG.info("Response da pesquisa estado: " + objListaMunicipio.getBody().toString());
+		LOG.info("Response PESQUISAR MUNICIPIO POR ESTADO: " + objListaMunicipio.getBody().toString());
 
 		final MunicipioDTO[] listDto = objListaMunicipio.getBody();
 

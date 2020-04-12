@@ -23,19 +23,15 @@ public class Cliente implements Serializable {
 	private String nome;
 	private String profissao;
 
-	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-	private List<Endereco> enderecos = new ArrayList<>();
-
 	public Cliente() {
 	}
 
-	public Cliente(Long id, String cpf, String nome, String profissao, List<Endereco> enderecos) {
+	public Cliente(Long id, String cpf, String nome, String profissao) {
 		super();
 		this.id = id;
 		this.cpf = cpf;
 		this.nome = nome;
 		this.profissao = profissao;
-		this.enderecos = enderecos;
 	}
 
 	public Long getId() {
@@ -70,12 +66,10 @@ public class Cliente implements Serializable {
 		this.profissao = profissao;
 	}
 
-	public List<Endereco> getEnderecos() {
-		return enderecos;
-	}
 
-	public void setEnderecos(List<Endereco> enderecos) {
-		this.enderecos = enderecos;
+	@Override
+	public String toString() {
+		return "Cliente [id=" + id + ", cpf=" + cpf + ", nome=" + nome + ", profissao=" + profissao + "]";
 	}
 
 }
