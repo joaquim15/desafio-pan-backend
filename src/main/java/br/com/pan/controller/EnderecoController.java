@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.pan.domain.entity.Cliente;
 import br.com.pan.domain.entity.Endereco;
 import br.com.pan.dto.CepDTO;
-import br.com.pan.dto.ClienteDTO;
 import br.com.pan.dto.EnderecoDTO;
 import br.com.pan.exceptions.ObjectNotFoundExeption;
 import br.com.pan.repositories.EnderecoRepository;

@@ -32,6 +32,7 @@ public class EstadoController {
 	
 	@Value("${consulta.municipio}")
 	private String MUNICIPIO_URI;
+	
 
 	@GetMapping
 	public ResponseEntity<List<EstadoDTO>> obterEstados() {

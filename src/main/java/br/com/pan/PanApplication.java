@@ -14,6 +14,7 @@ import br.com.pan.repositories.EnderecoRepository;
 
 @SpringBootApplication
 public class PanApplication implements CommandLineRunner {
+	
 
 	@Autowired
 	ClienteRepository clienteRepository;

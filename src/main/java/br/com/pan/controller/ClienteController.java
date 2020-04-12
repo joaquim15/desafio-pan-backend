@@ -23,7 +23,7 @@ import br.com.pan.repositories.ClienteRepository;
 @RestController
 @RequestMapping(value = "/cliente")
 public class ClienteController {
-
+	
 	private Logger LOG = LoggerFactory.getLogger(ClienteDTO.class);
 
 	@Autowired
@@ -68,10 +68,10 @@ public class ClienteController {
 		final Cliente objCliente = this.clienteRepository.findClienteByCpf(cpf);
 
 		ClienteDTO dto = null;
-
 		if (objCliente != null) {
 			LOG.info("Response OBTER-CPF-CLIENTE: " + objCliente.toString());
 			dto = new ClienteDTO(objCliente);
+
 		} else {
 			throw new ObjectNotFoundExeption("CPF não encontrado: " + cpf + ", Tipo: " + ClienteDTO.class.getName());
 		}

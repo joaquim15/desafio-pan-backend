@@ -1,7 +1,5 @@
 package br.com.pan.dto;
 
-import java.io.Serializable;
-
 import br.com.pan.domain.entity.Endereco;
 
 public class EnderecoDTO {
