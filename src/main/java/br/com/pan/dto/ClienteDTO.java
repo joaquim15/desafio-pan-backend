@@ -15,7 +15,6 @@ public class ClienteDTO implements Serializable {
 	private String cpf;
 	private String nome;
 	private String profissao;
-	private List<Endereco> enderecos = new ArrayList<>();
 
 	public ClienteDTO() {
 		// TODO Auto-generated constructor stub
@@ -59,13 +58,4 @@ public class ClienteDTO implements Serializable {
 	public void setProfissao(String profissao) {
 		this.profissao = profissao;
 	}
-
-	public List<Endereco> getEnderecos() {
-		return enderecos;
-	}
-
-	public void setEnderecos(List<Endereco> enderecos) {
-		this.enderecos = enderecos;
-	}
-
 }
